@@ -5,13 +5,15 @@ mongoose.connect("mongodb://localhost:27017/daily", {
   useUnifiedTopology: true,
 });
 
-const Habits = mongoose.model(
-  "habits",
+const User = mongoose.model(
+  "user",
   new mongoose.Schema({
     username: { type: String, unique: true },
+    password: { type: String },
+    photo: { type: String },
     habits: [
       {
-        _id: { type: Number },
+        id: { type: Number },
         habitName: { type: String }, // 习惯名
         bgc: { type: String }, // 16进制颜色
         icon: { type: String }, // icon路径
@@ -30,4 +32,4 @@ const Habits = mongoose.model(
   })
 );
 
-module.exports = { Habits };
+module.exports = { User };

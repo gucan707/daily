@@ -54,20 +54,22 @@
 
   ```json
   {
-      "habitName": "<name>",
-      "bgc": "<bgc>",
-      "icon": "<icon>",
-      "times": "<times>", // 一天中的时段
-      "doneAt": -1,
-      "target": {
-          "fixed": [1,1,1,1,1,1,1],
-          "weeks": 0,
-          "month": 0,
-      },
-      "isEject": true,
-      "remarks": "string",
-      "creatAt": "创建时间戳",
-      
+      "username":"<name>",
+      "habit":{
+          "habitName": "<name>",
+          "bgc": "<bgc>",
+          "icon": "<icon>",
+          "times": "<times>", // 一天中的时段
+          "doneAt": -1,
+          "target": {
+              "fixed": [1,1,1,1,1,1,1],
+              "weeks": 0,
+              "month": 0,
+          },
+          "isEject": true,
+          "remarks": "string",
+          "creatAt": "创建时间戳",
+      }
   }
   ```
 
@@ -83,6 +85,8 @@
 
   ```json
   {
+      "username":"<name>",
+      "habitName": "<name>",
       "doneAt": "时间戳",
       "log": "string",
   }
@@ -110,6 +114,7 @@
 
   ```json
   {
+      "username":"<name>",
       "habitName": "<name>",
       "bgc": "<bgc>",
       "icon": "<icon>",
@@ -123,8 +128,8 @@
       "remarks":"string",
       
   }
-  ```
-
+```
+  
   
 
 ### 查
@@ -142,6 +147,7 @@
 
   ```json
   {
+      "username":"<name>",
       "status": 200,
       "msg": "ok",
       "data": {
@@ -171,6 +177,6 @@
           ]
       }
   }
-  ```
-
+```
+  
   
