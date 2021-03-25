@@ -54,7 +54,7 @@
 
   ```json
   {
-      "name": "<name>",
+      "habitName": "<name>",
       "bgc": "<bgc>",
       "icon": "<icon>",
       "times": "<times>", // 一天中的时段
@@ -110,7 +110,7 @@
 
   ```json
   {
-      "name": "<name>",
+      "habitName": "<name>",
       "bgc": "<bgc>",
       "icon": "<icon>",
       "times": "<times>",
@@ -149,7 +149,7 @@
           "habits": [
               {
                   "id": "<id>",
-                  "name": "<name>",
+                  "habitName": "<name>",
                   "icon": "<url>",
                   "bgc": "<bgc>",
                   "continue": "<continue>",
