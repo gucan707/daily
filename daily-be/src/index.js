@@ -1,7 +1,15 @@
 const Koa = require("koa");
-const app = new Koa();
+const cors = require("@koa/cors");
+const koaBody = require("koa-body");
 const router = require("./routers/router");
 
-app.use(router.routes(), router.allowedMethods());
+const app = new Koa();
 
-app.listen(8080);
+app
+  .use(cors())
+  .use(koaBody())
+
+  .use(router.routes())
+  .use(router.allowedMethods())
+
+  .listen(8080);

@@ -1,13 +1,14 @@
 const Router = require("koa-router");
-const createHabit = new Router();
-
-const koaBody = require("koa-body");
 const { User } = require("../models/habit");
 
+const createHabit = new Router();
+
 createHabit.post("/", async (ctx) => {
-  const habit = ctx.request.body;
-  const user = await User.findOne({ username: habit.username });
-  user.habits.push(habit.habit);
+  const { habit, username } = ctx.request.body;
+  const user = await User.findOne({ username });
+  const idx = user.habits.length ? user.habits[user.habits.length - 1].id++ : 0;
+  habit.id = idx;
+  user.habits.push(habit);
   user.markModified("habits");
   user.save((err, user) => {
     if (err) console.log(err);

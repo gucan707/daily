@@ -1,11 +1,10 @@
 const Router = require("koa-router");
-const login = new Router();
-
-const koaBody = require("koa-body");
 const { User } = require("../models/habit");
 const sha256 = require("../util/sha256");
 
-login.post("/", koaBody(), async (ctx) => {
+const login = new Router();
+
+login.post("/", async (ctx) => {
   const userObj = ctx.request.body;
   const username = await User.findOne({ username: userObj.username });
   if (!username) {

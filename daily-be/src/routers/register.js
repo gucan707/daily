@@ -1,10 +1,10 @@
 const Router = require("koa-router");
-const register = new Router();
-const koaBody = require("koa-body");
 const { User } = require("../models/habit");
 const sha256 = require("../util/sha256");
 
-register.post("/", koaBody(), async (ctx) => {
+const register = new Router();
+
+register.post("/", async (ctx) => {
   const userObj = ctx.request.body;
   userObj.password = sha256(userObj.password); // TODO 记得改
   const username = await User.findOne({ username: userObj.username });

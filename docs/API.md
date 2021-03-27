@@ -75,11 +75,22 @@
 
 ### 删
 
-- url: `DELETE BASE/delHabit/<id>`
+- url: `DELETE BASE/delHabit`
+
+- 数据：
+
+  ```json
+  {
+      "username":"<name>",
+      "id":"<id>"
+  }
+  ```
+
+  
 
 ### 改(打卡)
 
-- url: `PUT BASE/modifyHabit/done/<id>`
+- url: `POST BASE/modifyHabit/done`
 
 - 数据：
 
@@ -106,32 +117,32 @@
   }
   ```
 
-### 改(编辑习惯)
+### 改(编辑习惯)(直接删除增加)
 
-- url: `PUT BASE/modifyHabit/edit/<id>`
+- url: `POST BASE/modifyHabit/edit`
 
 - 数据：
 
   ```json
   {
       "username":"<name>",
-      "habitName": "<name>",
-      "bgc": "<bgc>",
-      "icon": "<icon>",
-      "times": "<times>",
-      "target": {
-          "fixed": [1,1,1,1,1,1,1],
-          "weeks": 0,
-          "month": 0,
-      },
-      "isEject": true,
-      "remarks":"string",
+      "habit":{
+          "habitName": "<name>",
+          "bgc": "<bgc>",
+          "icon": "<icon>",
+          "times": "<times>",
+          "target": {
+              "fixed": [1,1,1,1,1,1,1],
+              "weeks": 0,
+              "month": 0,
+          },
+          "isEject": true,
+          "remarks":"string",
+      }
+  
       
   }
-```
-  
-  
-
+  ```
 ### 查
 
 - url: `GET BASE/searchHabit?<query>`
@@ -145,7 +156,7 @@
 
 - 返回：
 
-  ```json
+```json
   {
       "username":"<name>",
       "status": 200,
@@ -178,5 +189,5 @@
       }
   }
 ```
-  
+
   
