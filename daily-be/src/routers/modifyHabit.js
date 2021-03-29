@@ -13,7 +13,11 @@ modifyHabit.post("/done", async (ctx) => {
       break;
     }
   }
-  ctx.status = 200;
+  user.markModified("habits");
+  user.save();
+  ctx.body = {
+    msg: "ok",
+  };
 });
 
 modifyHabit.post("/edit", async (ctx) => {
@@ -25,7 +29,11 @@ modifyHabit.post("/edit", async (ctx) => {
       break;
     }
   }
-  ctx.status = 200;
+  user.markModified("habits");
+  user.save();
+  ctx.body = {
+    msg: "ok",
+  };
 });
 
 module.exports = modifyHabit;

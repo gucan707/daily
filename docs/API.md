@@ -9,7 +9,7 @@
   ```json
   {
       "username": "name",
-      "pw": "sha256的密码",
+      "password": "sha256的密码",
   }
   ```
 
@@ -38,7 +38,7 @@
   ```json
   {
       "username": "name",
-      "pw": "sha256的密码",
+      "password": "sha256的密码",
   }
   ```
 
@@ -149,8 +149,9 @@
 
 - query: 
 
-  - name: 习惯名
-  - detail: true (是否需要详细信息)
+  - username: 用户名
+  - habitName: 习惯名
+  - detail: true (是否需要详细信息) // 感觉没必要？再看看
   - begin: 时间戳（doneAt下限，默认 -2）
   - end: 时间戳
 
