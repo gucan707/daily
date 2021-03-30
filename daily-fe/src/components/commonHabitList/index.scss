@@ -1,0 +1,35 @@
+$width: 3rem;
+$fontSize: 1rem;
+
+.list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+  border: 0.1rem solid black;
+  font-size: $fontSize;
+
+  img {
+    width: $width;
+  }
+
+  .habit-name {
+    margin: 0 0.5rem;
+    flex: 1 1 0;
+  }
+
+  .brief {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    word-break: keep-all;
+
+    b {
+      font-size: $fontSize + 0.1rem;
+    }
+
+    span {
+      font-size: $fontSize - 0.2rem;
+    }
+  }
+}

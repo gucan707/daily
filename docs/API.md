@@ -60,6 +60,12 @@
           "bgc": "<bgc>",
           "icon": "<icon>",
           "times": "<times>", // 一天中的时段
+          "log":[
+              {
+                  "doneAt": "时间戳",
+                  "content": "日志string"
+              }
+          ],
           "doneAt": -1,
           "target": {
               "fixed": [1,1,1,1,1,1,1],
@@ -97,7 +103,7 @@
   ```json
   {
       "username":"<name>",
-      "habitName": "<name>",
+      "id":"<id>",
       "doneAt": "时间戳",
       "log": "string",
   }

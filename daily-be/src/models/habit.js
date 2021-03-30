@@ -18,7 +18,12 @@ const User = mongoose.model(
         bgc: { type: String }, // 16进制颜色
         icon: { type: String }, // icon路径
         times: { type: String }, // 一天中的时段
-        doneAt: { type: Number }, // 完成时间
+        log: [
+          {
+            doneAt: { type: String },
+            content: { type: String },
+          },
+        ],
         target: {
           fixed: { type: Array }, // 固定每周目标
           weeks: { type: Number }, // 每周完成次数目标

@@ -7,9 +7,11 @@ function Icon(props) {
   const [doneAt, setDoneAt] = useState(props.doneAt);
   const [imgClass, setImgClass] = useState("img");
 
+  // TODO 发请求改数据库
   function doHabit() {
     setDoneAt(~doneAt ? -1 : Date.now());
     setImgClass("img rotate");
+    setTimeout(() => setImgClass("img"), 200);
   }
 
   return (
