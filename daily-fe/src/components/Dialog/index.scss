@@ -1,0 +1,71 @@
+$width: 3rem;
+
+.dialog {
+  width: 80vw;
+  height: 55vh;
+  min-height: 370px;
+  // background-color: aqua;
+  border-radius: 10px;
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 13%;
+    border-radius: 10px 10px 0 0;
+    padding: 0 1rem;
+
+    div {
+      background-color: #fff;
+      padding: 0.2rem 0.4rem;
+      border-radius: 0.2rem;
+    }
+  }
+
+  .icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0.5rem 0 1rem 0;
+
+    img {
+      width: $width;
+      height: $width;
+      border: 0.1rem solid black;
+      border-radius: 50%;
+      margin-bottom: 0.3rem;
+    }
+  }
+
+  textarea {
+    display: block;
+    border: none;
+    outline: none;
+    resize: none;
+    width: 80%;
+    height: 40%;
+    background: rgb(251, 253, 252);
+    margin: 0 auto;
+    font: initial;
+  }
+
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10%;
+    margin: 1rem 0;
+    padding: 0 0.5rem;
+    // background-color: burlywood;
+
+    div {
+      color: gray;
+    }
+
+    .save {
+      padding: 0.7rem 1rem;
+      border-radius: 5%;
+      color: black;
+    }
+  }
+}
