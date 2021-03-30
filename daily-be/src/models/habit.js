@@ -31,7 +31,7 @@ const User = mongoose.model(
         },
         isEject: { type: Boolean }, // 打卡时是否自动弹出打卡日志
         remarks: { type: String }, // 习惯的备注
-        creatAt: { type: String }, // 习惯创建时间
+        createAt: { type: String }, // 习惯创建时间
       },
     ],
   })
