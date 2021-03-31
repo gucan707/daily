@@ -1,10 +1,23 @@
 $width: 3rem;
 $fontSize: 0.8rem;
 
-.icon-today {
+.icon {
   font-size: $fontSize;
   width: $width + 1rem;
   text-align: center;
+
+  .img {
+    width: $width;
+    height: $width;
+    border: 0.1rem solid black;
+    border-radius: 50%;
+    transition: transform 0.2s linear, background-color 0s;
+    transition-delay: 0s, 0.2s;
+  }
+
+  .img.rotate {
+    transform: scaleX(0);
+  }
 
   .brief {
     .habit-name {

@@ -13,7 +13,6 @@ const User = mongoose.model(
     photo: { type: String },
     habits: [
       {
-        id: { type: Number },
         habitName: { type: String }, // 习惯名
         bgc: { type: String }, // 16进制颜色
         icon: { type: String }, // icon路径
